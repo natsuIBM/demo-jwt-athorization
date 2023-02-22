@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Appenders>
+        <Console name="LogInJSON" target="SYSTEM_OUT">
+            <JsonLayout eventEOL="true" compact="false" stacktraceAsString="true" properties="true" propertiesAsList="true">
+                <KeyValuePair key="StudytonightField" value="studytonightValue" />
+            </JsonLayout>
+        </Console>
+        <Console name="LogInJSON2" target="SYSTEM_OUT">
+            <JsonLayout eventEOL="true" compact="false" stacktraceAsString="true" properties="true" propertiesAsList="true">
+                <KeyValuePair key="StudytonightField" value="studytonightValue" />
+            </JsonLayout>
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Logger name="CONSOLE_JSON_APPENDER" level="debug" additivity="false">
+            <AppenderRef ref="LogInJSON"/>
+        </Logger>
+        <Logger name="CONSOLE_JSON_APPENDER2" level="debug" additivity="false">
+            <AppenderRef ref="LogInJSON2"/>
+        </Logger>
+    </Loggers>
+</Configuration>
